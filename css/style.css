@@ -1,0 +1,62 @@
+html,body
+{
+font-family:'Segoe UI', Tahoma, Verdana, sans-serif;
+background-color: rgb(162, 162, 175);
+}
+p
+{
+ font-size: 25px; 
+ font-style: italic;  
+}
+h1
+{
+font-size: 50px;
+}
+h2
+{
+font-size: 40px;
+font-style: bold;  
+}
+h3
+{
+text-align: center;
+font-size: 60px;
+font-style: bold;  
+}
+h6
+{
+font-size: 50px;
+color: aliceblue;
+text-align: center;
+justify-content: center;    
+}
+#tos
+{
+color: aliceblue;    
+text-align: center;
+justify-content: center;  
+padding-left: 20%;
+padding-right: 20%; 
+}
+h5
+{
+font-size: 30px;
+font-style: bold;
+color: black;  
+}
+.text
+{
+font-size: 22px;
+}
+.carousel-inner, .carousel-indicators, .carousel-control-next-icon, .carousel-control-prev-icon
+{
+position: relative;
+left: 20vw;
+}
+.thankyou
+{
+text-align: center;
+font-size: 50px;
+font-weight: bold;
+font-style: italic;
+}
