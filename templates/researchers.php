@@ -11,36 +11,9 @@
 </head>
 <body>
     <!--Navbar-->
-    <section>
-    <nav class="navbar navbar-expand-lg bg-dark fixed-top navbar-dark py-1 px-5">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="index.html"><img src = "img/TatyiLekaren.png" style = "width: 130px"></a>
-
-          <button class="navbar-toggler" type="button" 
-          data-bs-toggle="collapse" 
-          data-bs-target="#navbarSupportedContent" 
-          aria-controls="navbarSupportedContent" 
-          aria-expanded="false" 
-          aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ms-3">
-              <li class="nav-item ms-3">
-                <a class="nav-link" aria-current="page" href="index.html">Home</a>
-              </li>
-              <li class="nav-item ms-3">
-                <a class="nav-link" href="bmi.html">BMI</a>
-              </li>
-              <li class="nav-item ms-3">
-                <a class="nav-link" href="faq.html">FAQ</a>
-              </li>          
-            </ul>
-          </div>
-        </div>
-      </nav>
-      </section>
+    <?php
+    include_once('partials/header.php');
+    ?>  
 <section class="p-5 mt-5">
       <table class="table table-striped">
         <thead>

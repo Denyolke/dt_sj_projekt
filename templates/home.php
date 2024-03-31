@@ -6,57 +6,17 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" 
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    
     <title>TatyiPharma</title>
 </head>
 <body>
-    <!--Navbar-->
-    <nav class="navbar navbar-expand-lg bg-dark fixed-top navbar-dark py-1 px-5">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="index.html"><img src = "img/TatyiLekaren.png" style = "width: 130px"></a>
-
-          <button class="navbar-toggler" type="button" 
-          data-bs-toggle="collapse" 
-          data-bs-target="#navbarSupportedContent" 
-          aria-controls="navbarSupportedContent" 
-          aria-expanded="false" 
-          aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ms-3">
-              <li class="nav-item ms-3">
-                <a class="nav-link" aria-current="page" href="index.html">Home</a>
-              </li>
-              <li class="nav-item ms-3">
-                <a class="nav-link" aria-current="page" href="#aboutus">About us</a>
-              </li>
-              <li class="nav-item ms-3">
-                <a class="nav-link" aria-current="page" href="#gallery">Gallery</a>
-              </li>
-              <li class="nav-item ms-3">
-                <a class="nav-link" href="#contact">Contact</a>
-              </li>
-              <li class="nav-item ms-3">
-                <a class="nav-link" href="researchers.html">Researchers</a>
-              </li>
-              <li class="nav-item ms-3">
-                <a class="nav-link" href="bmi.html">BMI</a>
-              </li>
-              <li class="nav-item ms-3">
-                <a class="nav-link" href="faq.html">FAQ</a>
-              </li>
-              <li class="nav-item position-absolute end-0 px-5">
-                <a class="nav-link" href="formular.html">Sign Up</a>
-              </li>
-              <li class="nav-item ms-3 position-absolute end-0">
-                <a class="nav-link" href="login.html">Log in</a>
-              </li>          
-            </ul>
-          </div>
-        </div>
-      </nav>
+    <!--Navbar--> 
+     <?php
+  
+    include_once('partials/header.php');
+    
+    ?>   
+    
     <!--Top-->
     <section class="bg-dark text-light p-5 text-center">
         <div class="container p-5">
@@ -66,10 +26,10 @@
                 <p class ="lead my-4">
                     We are hiring, people who want to help others, if you'd like to become a member of our research team, you can sign up right here, or you can read more about us down below. 
                 </p>
-                <a href="formular.html"><button class = "btn btn-primary btn-lg">Sign up</button></a>
+                <a href="templates/formular.php"><button class = "btn btn-primary btn-lg">Sign up</button></a>
             </div>
             
-           <img class = "img-fluid d-none d-sm-block" style="width: 40%;" src = "img/us.png"/>
+           <img class = "img-fluid d-none d-sm-block" style="width: 40%;" src = "../img/us.png"/>
           
            </div>
         </div>
@@ -90,14 +50,14 @@
                     </div>
                     </div>
                     <div class="col-md">
-                        <img class = "img-fluid" style="width: 60%; border-radius: 10px;" src = "img/docandnurse.png">
+                        <img class = "img-fluid" style="width: 60%; border-radius: 10px;" src = "../img/docandnurse.png">
                     </div>
                  
                 </div>
                 <div class="row align-items-center justify-content-between">
               
                     <div class="col-md p-5">
-                        <img class = "img-fluid" style="width: 60%; border-radius: 10px;" src = "img/office.jpg">
+                        <img class = "img-fluid" style="width: 60%; border-radius: 10px;" src = "../img/office.jpg">
                        
                         </div>
                         <div class="col-md-6">
@@ -122,22 +82,22 @@
     
     <div class="carousel-inner ">
       <div class="carousel-item active">
-        <img src="img/r1r.png" class="d-block w-100">
+        <img src="../img/r1r.png" class="d-block w-100">
         <div class="carousel-caption d-none d-md-block">
         </div>
       </div>
       <div class="carousel-item">
-        <img src="img/r2r.png" class="d-block w-100">
+        <img src="../img/r2r.png" class="d-block w-100">
         <div class="carousel-caption d-none d-md-block">
         </div>
       </div>
       <div class="carousel-item">
-        <img src="img/r3r.png" class="d-block w-100">
+        <img src="../img/r3r.png" class="d-block w-100">
         <div class="carousel-caption d-none d-md-block">
         </div>
       </div>
       <div class="carousel-item">
-        <img src="img/r4r.png" class="d-block w-100">
+        <img src="../img/r4r.png" class="d-block w-100">
         <div class="carousel-caption d-none d-md-block">
         </div>
       </div>
