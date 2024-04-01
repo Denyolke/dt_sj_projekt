@@ -2,10 +2,10 @@
   require('../_inc/functions.php');
 ?>
 <link rel="stylesheet" href="../css/style.css">
-
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
 <nav class="navbar navbar-expand-lg bg-dark fixed-top navbar-dark py-1 px-5">
         <div class="container-fluid">
-          <a class="navbar-brand" href="index.php"><img src = "../img/TatyiLekaren.png" style = "width: 130px"></a>
+          <a class="navbar-brand" href="home.php"><img src = "../img/TatyiLekaren.png" style = "width: 130px"></a>
 
           <button class="navbar-toggler" type="button" 
           data-bs-toggle="collapse" 
