@@ -1,14 +1,33 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" 
-    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="css/style.css">
-    <title>Register</title>
-</head>
+<?php
+include_once('partials/head.php');
+  require_once('../_inc/functions.php');
+
+    $user_object = new User();
+
+    // Spracovanie údajov z formulára po odoslaní
+    if(isset($_POST['user_register'])){
+        $email = $_POST['email'];
+        $password = $_POST['password'];
+        $confirm_password = $_POST['confirm_password'];
+
+        // Kontrola, či sa zadané heslá zhodujú
+        if($password === $confirm_password) {
+            // Volanie metódy register() na vytvorenie používateľa
+            if($user_object->register($email, $password)) {
+                // Registrácia bola úspešná
+                echo "<p>Registrácia bola úspešná</p>";
+            } else {
+                // Registrácia zlyhala
+                echo "<p>Registrácia zlyhala</p>";
+            }
+        } else {
+            // Heslá sa nezhodujú
+            echo "<p>Heslá sa nezhodujú</p>";
+        }
+    }
+?>
+
+
 <body>
     <section class="vh-100" style="background-color: #212529;">
         <div class="container h-100">
@@ -21,54 +40,51 @@
       
                       <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Sign up</p>
       
-                      <form class="mx-1 mx-md-4">
+                      <form class="mx-1 mx-md-4" action="" method="POST">
       
-                        <div class="d-flex flex-row align-items-center mb-3">
-                          <i class="fas fa-user fa-lg me-3 fa-fw"></i>
-                          <div class="form-outline flex-fill mb-0">
-                            <input type="text" id="form3Example1c" class="form-control" />
-                            <label class="form-label" for="form3Example1c">Username</label>
-                          </div>
-                        </div>
+                    
       
                         <div class="d-flex flex-row align-items-center mb-3">
                           <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
                           <div class="form-outline flex-fill mb-0">
-                            <input type="email" id="form3Example3c" class="form-control" required/>
-                            <label class="form-label" for="form3Example3c">Email</label>
+                            <input type="email" id="email" name = "email" class="form-control" required/>
+                            <label class="form-label" for="email">Email</label>
                           </div>
                         </div>
       
                         <div class="d-flex flex-row align-items-center mb-3">
                           <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
                           <div class="form-outline flex-fill mb-0">
-                            <input type="password" id="form3Example4c" class="form-control" />
-                            <label class="form-label" for="form3Example4c">Password</label>
+                            <input type="password" id="password" name="password" class="form-control" required/>
+                            <label class="form-label" for="password">Password</label>
                           </div>
                         </div>
+
                         <div class="d-flex flex-row align-items-center mb-3">
-                            <i class="fas fa-key fa-lg me-3 fa-fw"></i>
-                            <div class="form-outline flex-fill mb-0">
-                              <input type="textarea" id="form3Example4cd" class="form-control" />
-                              <label class="form-label" for="form3Example4cd">Why would you like to join?</label>
-                            </div>
+                          <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
+                          <div class="form-outline flex-fill mb-0">
+                            <input type="password" id="confirm_password" name = "confirm_password" class="form-control" required/>
+                            <label class="form-label" for="confirm_pasword">Password</label>
                           </div>
+                        </div>
+                       
       
                         <div class="form-check d-flex justify-content-center mb-2">
-                          <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3c" />
-                          <label class="form-check-label" for="form2Example3">
+                          <input class="form-check-input me-2" type="checkbox" value="1" required />
+                          <label class="form-check-label" for="checkker">
                             I agree all statements in <a href="termsofservice.php">Terms of service</a>
                           </label>
                         </div>
                         <div class="form-check d-flex justify-content-center mb-1">
-                          <label class="form-check-label" for="form2Example3">
-                            I already have an account. <a href="login.php">Log in!</a>
+                          <label class="form-check-label">
+                            <a href="login.php">I already have an account!</a>
                           </label>
                         </div>
                        
       
                         <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
-                          <a href="thankyoupage.php"><button type="button" class="btn btn-primary btn-lg">Register</button></a>
+                          <button type="submit" class="btn btn-primary btn-lg" name = "user_register">Register</button>
+
                           <a href="home.php" class="position-absolute end-0 px-5"><h1><i class="bi bi-skip-backward-btn-fill"></i></h1></a>
 
                         </div>
