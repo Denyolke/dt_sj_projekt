@@ -17,7 +17,7 @@
                 if($page_name == 'Register' || $page_name == 'Login')
                 {
                     if($counter++ < 1){
-                        for ($i = 0; $i <= 22; $i++) {
+                        for ($i = 0; $i <= 19; $i++) {
                             $menu_items .= '<li class="nav-item ms-5">' . $empty_string . '</li>';
                         }
                         
@@ -31,7 +31,7 @@
                 elseif($page_name == 'Logout')
                 {
                     if($counter++ < 1){
-                        for ($i = 0; $i <= 25; $i++) {
+                        for ($i = 0; $i <= 21; $i++) {
                             $menu_items .= '<li class="nav-item ms-5">' . $empty_string . '</li>';
                         }
                         
