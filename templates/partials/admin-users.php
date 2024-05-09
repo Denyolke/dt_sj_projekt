@@ -1,6 +1,8 @@
 <h2>Users display:</h2>
 <?php
 include_once('partials/head.php');
+include_once('partials/header.php');
+
 
 
     $contact_object = new User();

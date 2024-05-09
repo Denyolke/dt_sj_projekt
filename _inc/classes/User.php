@@ -92,5 +92,45 @@
         }
     }
 
+    public function select_single($contact_id){
+        try {
+          $data = array('contact_id'=>$contact_id);
+          $query = "SELECT * FROM researchers WHERE id = :contact_id";
+          $query_run = $this->db->prepare($query);
+          $query_run->execute($data);
+          
+          $contact_data = $query_run->fetch();
+          
+          return $contact_data; 
+
+      } catch(PDOException $e) {
+       
+          echo $e->getMessage();
+          
+      }
+    }
+
+    public function edit($contact_id, $new_data){
+        try{
+          // Zostavenie dát pre aktualizáciu
+          $data = array(
+              'contact_id' => $contact_id,
+              'first_name' => $new_data['first_name'], // Predpokladáme, že máme pole $new_data s novými údajmi
+              'last_name' => $new_data['last_name'],
+              'handle' => $new_data['handle']
+          );
+          
+           $query = "UPDATE researchers SET first_name = :first_name, last_name = :last_name, handle = :handle WHERE id = :contact_id";
+           $query_run = $this->db->prepare($query);
+           $query_run->execute($data);
+           
+  
+        }catch(PDOException $e){
+          // Spracovanie chyby, ak nastane
+          echo $e->getMessage();
+        }
+    }
+
+
  }
 ?>
