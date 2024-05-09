@@ -37,7 +37,16 @@
                 'Login' => "login.php",
                 'Register' => "formular.php"  
            );
-           echo(generate_menu($pages));
+           if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == true){
+            $pages['Logout'] = 'logout.php';
+            unset($pages['Login']);
+            unset($pages['Register']);
+         }
+
+           $menu_object  = new Menu($pages);
+           echo($menu_object->generate_menu());
+
+           
             ?>
                   
             </ul>

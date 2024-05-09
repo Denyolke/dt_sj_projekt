@@ -12,8 +12,14 @@ if(isset($_POST['user_login'])){
     $login_success = $user_object->login($email,$password);
     //ak metóda vráti TRUE
     if($login_success == true){
+      if($_SESSION['is_admin'] == 1){
         header('Location: admin.php');
+      }
+      else{
+        header('Location: home.php');
         die;
+      }
+        
     }else{
         echo 'Nesprávne meno alebo heslo';
         
