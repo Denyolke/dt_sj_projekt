@@ -66,7 +66,9 @@ if(isset($_POST['user_login'])){
       
                         <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
                           <button type="submit" value="Odoslať" name="user_login" class="btn btn-primary btn-lg">Log in</button>
+                          <a href="home.php" class="position-absolute end-0 px-5"><h1><i class="bi bi-skip-backward-btn-fill"></i></h1></a>
                         </div>
+                        
       
                       </form>
       
