@@ -40,14 +40,12 @@
         try{
             $hashed_password = $password;
         
-            // Dáta pre vloženie nového používateľa do databázy
             $data = array(
                 'user_email' => $email,
                 'user_password' => md5($hashed_password),
                 'user_role'=>'0'
             );
 
-            // SQL dopyt na vloženie nového používateľa
             $sql = "INSERT INTO user (email, password,role) VALUES (:user_email, :user_password,:user_role)";
             $query_run = $this->db->prepare($sql);
             $query_run->execute($data);
@@ -126,7 +124,6 @@
            
   
         }catch(PDOException $e){
-          // Spracovanie chyby, ak nastane
           echo $e->getMessage();
         }
     }

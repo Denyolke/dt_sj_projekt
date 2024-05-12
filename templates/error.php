@@ -1,6 +1,5 @@
 <?php
 include_once('partials/head.php');
-
 ?> 
     <main>
       <section class="container">

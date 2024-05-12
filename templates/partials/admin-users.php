@@ -4,7 +4,6 @@ include_once('partials/head.php');
 include_once('partials/header.php');
 
 
-
     $contact_object = new User();
     $contacts = $contact_object->select();
     if(isset($_POST['delete_contact'])){

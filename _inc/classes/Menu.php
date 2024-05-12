@@ -9,7 +9,7 @@
         }
 
         function generate_menu(): string{
-            $menu_items = ''; // Inicializácia premennej pre uloženie HTML kódu navigačného menu
+            $menu_items = ''; 
             $empty_string = '     ';
             $counter = 0;
             // Prechádza všetky položky v zadanom zozname stránok a URL adries

@@ -73,10 +73,8 @@ function generate_slides(array $headings, string $img_folder) {
             }
         }
         
-        // Koniec divu pre text snímky
         echo('</div>');
         
-        // Koniec divu pre snímku
         echo('</div>');
     }
     echo('<a id="prev" class="prev">❮</a>
@@ -98,10 +96,7 @@ function generate_qna(array $qna){
 
 function db_connection(){
     try{
-        /*$pdo = new PDO('mysql:host=localhost;dbname=vaša_databáza', 
-                         'vaše_používateľské_meno', 
-                         'vaše_heslo');
-        */
+        
         $connection = new PDO("mysql:host=" . DATABASE['HOST'] . ";dbname=" . DATABASE['DBNAME'] . ";charset=utf8", 
                               DATABASE['USER_NAME'], 
                               DATABASE['PASSWORD']);

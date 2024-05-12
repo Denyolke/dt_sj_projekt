@@ -10,7 +10,6 @@ if(isset($_POST['user_login'])){
     $user_object = new User();
 
     $login_success = $user_object->login($email,$password);
-    //ak metóda vráti TRUE
     if($login_success == true){
       if($_SESSION['is_admin'] == 1){
         header('Location: admin.php');

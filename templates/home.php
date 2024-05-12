@@ -24,7 +24,6 @@
            </div>
         </div>
     </section>
-    <!--Cookies-->
  
     <!--About us-->
     <section id = "aboutus" class="p-5">

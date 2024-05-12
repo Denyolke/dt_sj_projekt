@@ -4,7 +4,7 @@
           
             <div class="col-md p-5">
                 <p class="lead"> Website of the TatyiPharmacy research company.<br>
-                    Made via Bootstrap. <i class="bi bi-bootstrap"></i></p>
+                    Frontend via Bootstrap. <i class="bi bi-bootstrap"></i></p>
                 
                 </div>
                 <div class="col-md">

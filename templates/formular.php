@@ -14,14 +14,11 @@ include_once('partials/head.php');
         if($password === $confirm_password) {
             // Volanie metódy register() na vytvorenie používateľa
             if($user_object->register($email, $password)) {
-                // Registrácia bola úspešná
                 echo "<p>Registrácia bola úspešná</p>";
             } else {
-                // Registrácia zlyhala
                 echo "<p>Registrácia zlyhala</p>";
             }
         } else {
-            // Heslá sa nezhodujú
             echo "<p>Heslá sa nezhodujú</p>";
         }
     }

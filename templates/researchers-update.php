@@ -7,11 +7,10 @@
     if(isset($_POST['edit_contact'])) {
         $edit_contact_id = $_POST['edit_contact'];
         $contact_data = $contact_object->select_single($edit_contact_id);
-        //print_r($contact_data);
+        //print_r($contact_data); //test
     }
 
     if($contact_data) {
-        // Vyplnenie údajov do formulára
         $first_name = $contact_data->first_name;
         $last_name = $contact_data->last_name;
         $handle = $contact_data->handle;
